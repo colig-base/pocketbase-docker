@@ -1,0 +1,29 @@
+# fly.toml app configuration file generated for colig-pb on 2026-05-29T01:05:11Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'colig-pb'
+primary_region = 'ams'
+
+[http_service]
+  auto_start_machines = true
+  auto_stop_machines = true
+  force_https = true
+  internal_port = 8080
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  cpu_kind = 'shared'
+  cpus = 1
+  memory = '1gb'
+  memory_mb = 2048
+
+[[vm]]
+  cpu_kind = 'shared'
+  cpus = 1
+  memory = '512mb'
+  memory_mb = 512
+  processes = ['app']
+  size = 'shared-cpu-1x'
