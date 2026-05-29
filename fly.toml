@@ -29,8 +29,4 @@ primary_region = 'ams'
   memory = '512mb'
   memory_mb = 512
   processes = ['app']
-  size = 'shared-cpu-1x'
-
-[mounts]
-  source = "pb_data"
-  destination = "/pb/pb_data"
+  size = 'shared-cpu-1x' 
