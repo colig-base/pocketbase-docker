@@ -12,6 +12,9 @@ primary_region = 'ams'
   min_machines_running = 1
   processes = ['app']
 
+[env]
+  PB_MAX_REQUEST_BODY = "209715200"
+
 [[vm]]
   cpu_kind = 'shared'
   cpus = 1
