@@ -2,7 +2,7 @@ app = 'colig-pb'
 primary_region = 'ams'
 
 [build]
-  image = "registry.fly.io/colig-pb:deployment-0b6f75fde286625b3dda4f6d026ffed7"
+  image = "pocketbase/pocketbase:latest"
 
 [http_service]
   auto_start_machines = true
