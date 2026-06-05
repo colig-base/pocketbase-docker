@@ -12,14 +12,20 @@ primary_region = 'ams'
   min_machines_running = 1
   processes = ['app']
 
+[[http_service.checks]]
+  grace_period = "10s"
+  interval = "30s"
+  method = "GET"
+  timeout = "5s"
+  path = "/api/health"
+
 [env]
   PB_MAX_REQUEST_BODY = "209715200"
 
 [[vm]]
   cpu_kind = 'shared'
   cpus = 1
-  memory = '512mb'
-  memory_mb = 512
+  memory = '1gb'
   processes = ['app']
   size = 'shared-cpu-1x'
 
